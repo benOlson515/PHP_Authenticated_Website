@@ -16,7 +16,7 @@
             header("Location: index.php");
         }
         else{
-            echo "incorrect code entered";
+            echo "<script>alert('Invalid Code Entered')</script>";
         }
     }
 ?>
@@ -25,13 +25,16 @@
 <html>
 <head>
     <title>Access</title>
+    <link type="text/css" rel="stylesheet" href="CSS/mainStyle.css">
 </head>
 <body>
-    <h1 style="font-family: Tahoma;">Enter Access Code</h1>
-    <form action="login.php" method="post" enctype="multipart/form-data">
-        <input placeholder="Access Code" name="usercode" type="text" autofocus>
-        
-        <input name="login" type="submit" value="Go!">
-    </form>
+    <div id="loginBox">
+        <h1 style="font-family: Tahoma;">Enter Access Code</h1>
+        <form action="login.php" method="post" enctype="multipart/form-data">
+            <input id="code" placeholder="Access Code" name="usercode" type="text" autofocus>
+            
+            <input id="button" name="login" type="submit" value="Go!">
+        </form>
+    </div>
 </body>
 </html>
