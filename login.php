@@ -1,22 +1,23 @@
 <?php
     session_start();
 
-    $accesscode = "accesscode";
+    $accessname = "accessname";
+    $accesspassword = "password";
 
     if(isset($_POST['login'])){
-        $usercode = $_POST['usercode'];
-
-       
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        
 
         
 
-        if($usercode == $accesscode){
+        if($username == $accessname && $password == $accesspassword){
             $_SESSION["usercode"] = $usercode;
 
             header("Location: index.php");
         }
         else{
-            echo "<script>alert('Invalid Code Entered')</script>";
+            echo "<script>alert('Invalid Login')</script>";
         }
     }
 ?>
@@ -29,11 +30,14 @@
 </head>
 <body>
     <div id="loginBox">
-        <h1 style="font-family: Tahoma;">Enter Access Code</h1>
+        <h1 style="font-family: Tahoma;">Login</h1>
         <form action="login.php" method="post" enctype="multipart/form-data">
-            <input id="code" placeholder="Access Code" name="usercode" type="text" autofocus>
             
-            <input id="button" name="login" type="submit" value="Go!">
+            <input class="input" placeholder="Username" name="username" type="text" autofocus>
+            
+            <input class="input" placeholder="Password" name="password" type="text" autofocus>
+            
+            <input id="button" name="login" type="submit" value="Login">
         </form>
     </div>
 </body>
