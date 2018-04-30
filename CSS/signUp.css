@@ -1,0 +1,33 @@
+html{
+    background-image: url("../Images/green_grassland-wide.jpg");
+    background-position: center;
+}
+
+.input{
+    height: 40px;
+    font-size: 20px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 4px;
+}
+
+#signUpBox{
+    position: fixed;
+    left: 50%;
+    width: 200px;
+    margin-left: -120px;
+    background-color:whitesmoke;
+    padding: 20px;
+    top:15%;
+    box-shadow: 10px 10px rgba(0,0,0, .6);
+}
+
+#signUpBox h1{
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#button{
+    background-color: darkcyan;
+    cursor: pointer;
+}
